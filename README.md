@@ -7,18 +7,18 @@ A professional pub quiz management system with rotating host logic and seasonal 
 ### Prerequisites
 *   Node.js 20+
 *   pnpm (recommended) or npm
-*   PostgreSQL Database
+*   Docker (for local MySQL)
 
-### 1. Environment Setup
-Copy the example environment file and configure your database connection:
+### 1. Database Setup
+Start the local MySQL database using Docker Compose:
 
 ```bash
-cp .env .env.local
+pnpm backend:start
 ```
 
-Update `.env` with your PostgreSQL connection string:
+Configure your `.env` file with the database connection string:
 ```env
-DATABASE_URL="postgresql://user:password@localhost:5432/triviatally?schema=public"
+DATABASE_URL="mysql://user:password@localhost:3306/triviatally"
 ```
 
 ### 2. Install Dependencies
@@ -26,12 +26,12 @@ DATABASE_URL="postgresql://user:password@localhost:5432/triviatally?schema=publi
 pnpm install
 ```
 
-### 3. Database Setup
+### 3. Database Schema
 Push the Prisma schema to your database:
 ```bash
-npx prisma db push
+pnpm db:push
 ```
-*(Or use `npx prisma migrate dev` for versioned migrations)*
+*(Or use `pnpm db:migrate` for versioned migrations)*
 
 ### 4. Run Development Server
 Start the Next.js development server:
@@ -58,6 +58,8 @@ pnpm test
 | :--- | :--- |
 | `pnpm dev` | Start local dev server |
 | `pnpm build` | Build for production |
+| `pnpm backend:start` | Start local MySQL with Docker |
+| `pnpm backend:stop` | Stop local MySQL |
 | `npx prisma studio` | Open Database GUI |
-| `npx prisma db push` | Sync schema with DB (Prototyping) |
+| `pnpm db:push` | Sync schema with DB (Prototyping) |
 | `npx shadcn@latest add [component]` | Add new UI component |
