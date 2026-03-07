@@ -46,6 +46,24 @@ Run the test suite (Vitest):
 pnpm test
 ```
 
+## 🌍 i18n & Translations
+The project uses `next-intl` for internationalization.
+
+### Adding a new language
+1.  Create a new JSON file in `messages/` (e.g., `messages/fi.json`).
+2.  Add the same keys as in `messages/en.json` with translated values.
+3.  Add the new locale to the supported list if necessary (currently handled by `src/lib/locale.ts`).
+
+### Using translations in code
+```tsx
+import {useTranslations} from 'next-intl';
+
+export default function MyComponent() {
+  const t = useTranslations('MyNamespace');
+  return <h1>{t('title')}</h1>;
+}
+```
+
 ## 🛠️ Project Structure
 *   `src/app`: Next.js App Router (Frontend Pages & API Routes)
 *   `src/components`: Reusable UI components (Shadcn UI)
