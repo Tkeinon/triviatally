@@ -32,5 +32,28 @@
     "save": "Save",
     "cancel": "Cancel",
     "loading": "Loading..."
+  },
+  "Auth": {
+    "login": {
+      "title": "Log In",
+      "description": "Enter your credentials to access your account",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Log In",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign Up",
+      "error": "Invalid email or password"
+    },
+    "signup": {
+      "title": "Sign Up",
+      "description": "Create an account to join or manage teams",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Sign Up",
+      "haveAccount": "Already have an account?",
+      "logInLink": "Log In",
+      "error": "Failed to create account"
+    }
   }
 }

@@ -33,5 +33,28 @@
     "save": "Tallenna",
     "cancel": "Peruuta",
     "loading": "Ladataan..."
+  },
+  "Auth": {
+    "login": {
+      "title": "Kirjaudu sisään",
+      "description": "Syötä kirjautumistiedot päästäksesi tilillesi",
+      "emailLabel": "Sähköposti",
+      "passwordLabel": "Salasana",
+      "submit": "Kirjaudu",
+      "noAccount": "Eikö sinulla ole vielä tiliä?",
+      "signUpLink": "Rekisteröidy",
+      "error": "Väärä sähköposti tai salasana"
+    },
+    "signup": {
+      "title": "Rekisteröidy",
+      "description": "Luo tili liittyäksesi tiimeihin tai hallinnoidaksesi niitä",
+      "nameLabel": "Nimi",
+      "emailLabel": "Sähköposti",
+      "passwordLabel": "Salasana",
+      "submit": "Rekisteröidy",
+      "haveAccount": "Onko sinulla jo tili?",
+      "logInLink": "Kirjaudu",
+      "error": "Tilin luominen epäonnistui"
+    }
   }
 }

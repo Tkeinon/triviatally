@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Trophy, Users, BarChart } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Link from 'next/link';
 
 export default async function HomePage() {
   const t = await getTranslations('HomePage');
@@ -16,8 +17,12 @@ export default async function HomePage() {
         </div>
         <nav className="flex items-center gap-4">
           <LanguageSwitcher />
-          <Button variant="secondary" className="font-semibold">{t('logIn')}</Button>
-          <Button variant="outline" className="bg-primary text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold">{t('signUp')}</Button>
+          <Button variant="secondary" className="font-semibold" asChild>
+            <Link href="/auth/login">{t('logIn')}</Link>
+          </Button>
+          <Button variant="outline" className="bg-primary text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold" asChild>
+            <Link href="/auth/register">{t('signUp')}</Link>
+          </Button>
         </nav>
       </header>
 
