@@ -1,0 +1,37 @@
+{
+  "HomePage": {
+    "title": "Triviatally!",
+    "logIn": "Kirjaudu sisään",
+    "signUp": "Rekisteröidy",
+    "hero": {
+      "titlePart1": "Ammattimainen pubivisan",
+      "titlePart2": "hallintajärjestelmä",
+      "description": "Nosta visailuillat uudelle tasolle saumattomalla tiiminhallinnalla, reaaliaikaisella pisteytyksellä ja kattavalla kausiseurannalla. Suunniteltu isännille, jotka haluavat keskittyä hauskanpitoon, eivät taulukkolaskentaan.",
+      "getStarted": "Aloita",
+      "learnMore": "Lue lisää",
+      "highlight": "hallintajärjestelmä"
+    },
+    "features": {
+      "teamManagement": {
+        "title": "Tiimien hallinta",
+        "description": "Luo, liity ja hallitse visajoukkueita helposti. Seuraa jäseniä ja tiimien historiaa."
+      },
+      "liveScoring": {
+        "title": "Reaaliaikainen pisteytys",
+        "description": "Syötä pisteet lennossa dynaamisen ruudukkomme avulla. Tukee mukautettuja kierroksia ja rangaistuksia."
+      },
+      "seasonTracking": {
+        "title": "Kausiseuranta",
+        "description": "Hallinnoi jatkuvia kausia, seuraa kokonaispisteitä ja kruunaa visan mestarit."
+      }
+    },
+    "footer": {
+      "rights": "© {year} Trivitally. Kaikki oikeudet pidätetään."
+    }
+  },
+  "Common": {
+    "save": "Tallenna",
+    "cancel": "Peruuta",
+    "loading": "Ladataan..."
+  }
+}

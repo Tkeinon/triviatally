@@ -1,7 +1,32 @@
 {
   "HomePage": {
-    "title": "Welcome to TriviaTally",
-    "description": "Professional pub quiz management system"
+    "title": "Triviatally!",
+    "logIn": "Log In",
+    "signUp": "Sign Up",
+    "hero": {
+      "titlePart1": "Professional Pub Quiz",
+      "titlePart2": "Management System",
+      "description": "Elevate your trivia nights with seamless team management, live scoring, and comprehensive season tracking. Designed for hosts who want to focus on the fun, not the spreadsheet.",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "teamManagement": {
+        "title": "Team Management",
+        "description": "Easily create, join, and manage trivia teams. Keep track of rosters and team history."
+      },
+      "liveScoring": {
+        "title": "Live Scoring",
+        "description": "Input scores on the fly with our dynamic grid system. Supports custom rounds and penalties."
+      },
+      "seasonTracking": {
+        "title": "Season Tracking",
+        "description": "Run ongoing seasons, track cumulative scores, and crown the ultimate trivia champions."
+      }
+    },
+    "footer": {
+      "rights": "© {year} Trivitally. All rights reserved."
+    }
   },
   "Common": {
     "save": "Save",
