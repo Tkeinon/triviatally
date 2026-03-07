@@ -1,0 +1,11 @@
+{
+  "HomePage": {
+    "title": "Welcome to TriviaTally",
+    "description": "Professional pub quiz management system"
+  },
+  "Common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading..."
+  }
+}

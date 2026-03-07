@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TriviaTally 🏆
 
-## Getting Started
+A professional pub quiz management system with rotating host logic and seasonal tracking.
 
-First, run the development server:
+## 🚀 Getting Started
+
+### Prerequisites
+*   Node.js 20+
+*   pnpm (recommended) or npm
+*   PostgreSQL Database
+
+### 1. Environment Setup
+Copy the example environment file and configure your database connection:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env .env.local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Update `.env` with your PostgreSQL connection string:
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/triviatally?schema=public"
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Install Dependencies
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Database Setup
+Push the Prisma schema to your database:
+```bash
+npx prisma db push
+```
+*(Or use `npx prisma migrate dev` for versioned migrations)*
 
-## Learn More
+### 4. Run Development Server
+Start the Next.js development server:
+```bash
+pnpm dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 Testing
+Run the test suite (Vitest):
+```bash
+pnpm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Project Structure
+*   `src/app`: Next.js App Router (Frontend Pages & API Routes)
+*   `src/components`: Reusable UI components (Shadcn UI)
+*   `src/lib/validations`: **Shared Zod Schemas** (Single Source of Truth)
+*   `src/lib/db`: Database connection & utilities
+*   `messages/`: i18n translation files
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 Commands Cheatsheet
+| Command | Description |
+| :--- | :--- |
+| `pnpm dev` | Start local dev server |
+| `pnpm build` | Build for production |
+| `npx prisma studio` | Open Database GUI |
+| `npx prisma db push` | Sync schema with DB (Prototyping) |
+| `npx shadcn@latest add [component]` | Add new UI component |
