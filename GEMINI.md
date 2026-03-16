@@ -24,7 +24,7 @@ Big coverage for e2e is must
 - [x] Implement Auth.js (NextAuth) Config (`src/auth.ts`)
 - [x] Signup & Login APIs
 - [x] Register and Login forms
-- [ ] After completion, redirect to /dashboard (create, if missing)
+- [x] After completion, redirect to /dashboard (create, if missing)
 - [ ] Team Creation Logic & API
 - [ ] Team editing Logic & API
 - [ ] Team removing logic & API

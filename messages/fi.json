@@ -56,5 +56,12 @@
       "logInLink": "Kirjaudu",
       "error": "Tilin luominen epäonnistui"
     }
+  },
+  "Dashboard": {
+    "title": "Kojelauta",
+    "welcome": "Tervetuloa takaisin, {name}!",
+    "logout": "Kirjaudu ulos",
+    "teams": "Tiimisi",
+    "seasons": "Aktiiviset kaudet"
   }
 }

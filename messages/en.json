@@ -55,5 +55,12 @@
       "logInLink": "Log In",
       "error": "Failed to create account"
     }
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}!",
+    "logout": "Log Out",
+    "teams": "Your Teams",
+    "seasons": "Active Seasons"
   }
 }
