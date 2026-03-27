@@ -26,13 +26,15 @@ Big coverage for e2e is must
 - [x] Register and Login forms
 - [x] After completion, redirect to /dashboard (create, if missing)
 - [ ] Team Creation Logic & API
-- [ ] Team editing Logic & API
-- [ ] Team removing logic & API
-- [ ] Join Team Logic & API
-- [ ] Remove user from Team Logic & API
-- [ ] Basic User Role middleware
-- [ ] Unit tests for all
-- [ ] E2E tests for all
+    - [] User must be able create a team
+    - [] User must be able to add member to team
+    - [] User must be able to remove member from team
+    - [] User must be able to accept joining  a team
+    - [] User must be able to leave team
+- All API's must be tested. 
+- [] Implement all the above to front end
+- [] e2e tests must be created
+
 
 ### Phase 3: Season & Session [TODO]
 - [ ] Host Rotation Algorithm (Shuffle)

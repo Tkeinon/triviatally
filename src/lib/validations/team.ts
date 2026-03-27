@@ -9,3 +9,12 @@ export const TeamSchema = z.object({
 });
 
 export type Team = z.infer<typeof TeamSchema>;
+
+export const createTeamSchema = z.object({
+  name: z
+    .string()
+    .min(3, "Name must be at least 3 characters long")
+    .max(50, "Name must be at most 50 characters long"),
+})
+
+export type CreateTeamInput = z.infer<typeof createTeamSchema>
