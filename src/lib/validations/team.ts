@@ -18,3 +18,9 @@ export const createTeamSchema = z.object({
 })
 
 export type CreateTeamInput = z.infer<typeof createTeamSchema>
+
+export const inviteMemberSchema = z.object({
+  email: z.string().email("Invalid email address"),
+})
+
+export type InviteMemberInput = z.infer<typeof inviteMemberSchema>
