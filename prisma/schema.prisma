@@ -16,10 +16,21 @@ enum SessionStatus {
   COMPLETED
 }
 
+enum TeamRole {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+enum InvitationStatus {
+  PENDING
+  ACCEPTED
+}
+
 model Team {
   id          String    @id @default(cuid())
   name        String    @unique
-  members     User[]
+  members     TeamMember[]
   hostedSessions GameSession[] @relation("HostTeam")
   scores      Score[]
   createdAt   DateTime  @default(now())
@@ -35,8 +46,7 @@ model User {
   image         String?
   password      String?   // Hashed, optional for OAuth
   isAdmin       Boolean   @default(false)
-  teamId        String?
-  team          Team?     @relation(fields: [teamId], references: [id])
+  teams         TeamMember[]
   accounts      Account[]
   sessions      Session[]
   createdAt     DateTime  @default(now())
@@ -81,6 +91,20 @@ model VerificationToken {
   expires    DateTime
  
   @@id([identifier, token])
+}
+
+model TeamMember {
+  id        String           @id @default(cuid())
+  teamId    String
+  team      Team             @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role      TeamRole         @default(MEMBER)
+  status    InvitationStatus @default(PENDING)
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+
+  @@unique([teamId, userId])
 }
 
 model Season {
