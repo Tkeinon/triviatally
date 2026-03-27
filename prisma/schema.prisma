@@ -98,7 +98,7 @@ model TeamMember {
   teamId    String
   team      Team             @relation(fields: [teamId], references: [id], onDelete: Cascade)
   userId    String
-  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user      User             @relation(fields: [userId], references: [id])
   role      TeamRole         @default(MEMBER)
   status    InvitationStatus @default(PENDING)
   createdAt DateTime         @default(now())
