@@ -25,12 +25,12 @@ Big coverage for e2e is must
 - [x] Signup & Login APIs
 - [x] Register and Login forms
 - [x] After completion, redirect to /dashboard (create, if missing)
-- [ ] Team Creation Logic & API
-    - [x] User must be able create a team
+- [x] Team Creation Logic & API
+    - [x] User must be able to create a team
     - [x] User must be able to add member to team
-    - [ ] User must be able to remove member from team
-    - [ ] User must be able to accept joining  a team
-    - [ ] User must be able to leave team
+    - [x] User must be able to remove member from team
+    - [x] User must be able to accept joining  a team
+    - [x] User must be able to leave team
 - All API's must be tested. 
 - [] Implement all the above to front end
 - [] e2e tests must be created
