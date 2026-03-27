@@ -1,12 +1,12 @@
 import NextAuth from "next-auth"
 import { PrismaAdapter } from "@auth/prisma-adapter"
-import { prisma } from "@/lib/db"
+import { db } from "@/lib/db"
 import Credentials from "next-auth/providers/credentials"
 import bcrypt from "bcryptjs"
 import { loginSchema } from "@/lib/validations/auth"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(db),
   providers: [
     Credentials({
       name: "credentials",
@@ -22,7 +22,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
 
         const { email, password } = validatedData.data
-        const user = await prisma.user.findUnique({
+        const user = await db.user.findUnique({
           where: { email },
         })
 
